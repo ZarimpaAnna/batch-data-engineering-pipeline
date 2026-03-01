@@ -1,0 +1,28 @@
+
+services:
+  optasia_postgres:
+    image: postgres:15
+    container_name: container_postgres
+    environment:
+      POSTGRES_USER: user_user
+      POSTGRES_PASSWORD: pass_pass
+      POSTGRES_DB: postgres_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pyspark_notebook:
+    image: jupyter/pyspark-notebook
+    container_name: pyspark_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/home/jovyan/work
+      - ./03.Parquet_files:/home/jovyan/parquet_files
+    environment:
+      - SPARK_CLASSPATH=/home/jovyan/work/jars/postgresql-42.7.3.jar
+
+volumes:
+  postgres_data:
+
