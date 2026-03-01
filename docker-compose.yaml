@@ -14,7 +14,7 @@ services:
 
   pyspark_notebook:
     image: jupyter/pyspark-notebook
-    container_name: pyspark_notebook
+    container_name: pyspark_notebook_batch
     ports:
       - "8888:8888"
     volumes:
