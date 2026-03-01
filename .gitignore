@@ -1,3 +1,4 @@
 .env
 .ipynb_checkpoints/
-03.Parquet_files/transactions_enriched.parquet/*
+03.Parquet_files/*
+!03.Parquet_files/.gitkeep
