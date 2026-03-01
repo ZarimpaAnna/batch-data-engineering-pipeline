@@ -84,10 +84,11 @@ docker-compose up -d
 3. **Access Jupyter Notebook**
 
 - Visit `http://localhost:8888` and open the notebooks located in the designated folder
-- To find the Jupyter access token run the following command and paste it in the browser when prompted:
+- To find the Jupyter access token run the following command according to your shell type and paste it in the browser when prompted:
 
 ```bash
-docker logs pyspark_notebook 2>&1 | grep -o 'token=[^&]*'
+docker logs pyspark_notebook_batch 2>&1 | grep token (Git Bash/Linux/macOS)
+docker logs pyspark_notebook_batch 2>&1 | findstr token (PowerShell)
 ```
 ---
 
