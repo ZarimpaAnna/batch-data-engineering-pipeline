@@ -31,20 +31,20 @@ Batch_Data_Engineering_Pipeline/
 ├── OO.Docs/                                              
 │   ├── project_specification.md
 │ 
-├── O1.Data/                                              # Initial csv files
+├── O1.Data/                                       # Initial csv files
 │   ├── data_transactions.csv  
 │   ├── subscribers.csv   
 │ 
 ├── OO.Spark_app/
-│   ├── Subscribers.ipynb                                 # Cleans and writes subscribers data to PostgreSQL
-│   ├── Transactions_join.ipynb                           # Cleans transactions, performs join, handles unmatched entries and produces parquet file
+│   ├── Subscribers.ipynb                           # Cleans and writes subscribers data to PostgreSQL
+│   ├── Transactions_join.ipynb                     # Cleans transactions, performs join, handles unmatched entries and produces parquet file
 │ 
-├── O3.Parquet_files/                                     # Parquet files are saved here
+├── O3.Parquet_files/                               # Parquet files are saved here. Generated parquet files are not version-controlled and will be created locally during execution.
 │ 
-├── README.md                                             # Project information and instructions
-├── docker-compose.yaml                                   # To initiate docker services (Postgres & Jupyter)
-├── .gitignore                                            # Ignore .env file, checkpoints etc.
-├── .env                                                  # Created but not used (For demonstration purposes, database credentials are defined locally.)
+├── README.md                                       # Project information and instructions
+├── docker-compose.yaml                             # To initiate docker services (Postgres & Jupyter)
+├── .gitignore                                      # Ignore .env file, checkpoints etc.
+├── .env                                            # Created but not used (For demonstration purposes, database credentials are defined locally.)
 
 ```
 
